@@ -1,7 +1,16 @@
 <!--Formulário
 
 Formulários são aqueles campos de informação que o usuário coloca no site. Campos para nomes, datas, endereços.
-Essas informações podem ir para o servidor e podem ser armazenadas em um banco de dados. Para isto, usamos a seguinte tag   <form> </form>  -->
+Essas informações podem ir para o servidor e podem ser armazenadas em um banco de dados. Para isto, usamos a seguinte tag   <form> </form>  
+
+A função name: é para dar nome ao que eu criar. 
+O atributo action: é para eu dizer para onde os dados que foram enviados irão. Coloca o endereço do servidor que ele irá.
+O atributo method: tem 2 valores possiveis= GET e POST. Se usar GET quando a pessoa escreve e envia os dados, aparece la na parte do endereço. O método seguro é o POST que não irá exibir os dados e as senhas.
+Outro ATRIBUTO é o target: usando o método _blank, irá abrir em outra página, lembra?
+ O atributo autocomplte ='off' ou 'on'. É quando você voltar para a página, ele não irá completar as informações (claro, se usar o off) Se usar on: o pc armazena os dados, menos a senha.
+onsubimit "alert ('Enviei o formulário') é javascritp."-->
+
+
 
 
 <!DOCTYPE html>
@@ -13,7 +22,7 @@ Essas informações podem ir para o servidor e podem ser armazenadas em um banco
 </head>
 <body>
     
-    <form>
+    <form name="signup" onsubmit="alert ('Enviei o formulário!')" autocomplete="on" method="post" action="#">
         Nome: <input type="text" name="name" /> <br>
         Idade: <input type="number" name="age" /> <br>
         Senha: <input type="password" name="password" /> <br>
